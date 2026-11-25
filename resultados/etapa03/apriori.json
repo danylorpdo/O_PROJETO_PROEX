@@ -1,0 +1,26 @@
+{
+  "descoberta": {
+    "anos": [
+      2023,
+      2024
+    ],
+    "ocorrencias": 14693,
+    "graves": 3918,
+    "proporcao_grave": 0.2666575920506364
+  },
+  "teste": {
+    "ano": 2025,
+    "ocorrencias": 7630,
+    "graves": 1946,
+    "proporcao_grave": 0.25504587155963304
+  },
+  "criterios": {
+    "suporte_minimo": 0.01,
+    "confianca_minima": 0.25,
+    "lift_maior_que": 1,
+    "max_itens": 3
+  },
+  "regras_descobertas": 50,
+  "mantem_criterios_2025": 37,
+  "principais_dez_estaveis": 9
+}

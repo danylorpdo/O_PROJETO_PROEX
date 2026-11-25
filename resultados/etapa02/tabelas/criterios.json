@@ -1,0 +1,22 @@
+{
+  "unidade": "ocorrência PRF",
+  "densidade_2022_hab_km2": [
+    "< 25",
+    "25 a < 50",
+    "50 a < 100",
+    "100 a < 500",
+    "≥ 500"
+  ],
+  "populacao_residente_2022": [
+    "< 10 mil",
+    "10 a < 25 mil",
+    "25 a < 50 mil",
+    "50 a < 100 mil",
+    "≥ 100 mil"
+  ],
+  "grupo_pequeno_quando_denominador_menor_que": 30,
+  "intervalos": "Wilson de 95%, descritivos, sem ajuste para dependência entre ocorrências.",
+  "denominador_gravidade": "Total de ocorrências de cada combinação das categorias.",
+  "denominador_uso_solo": "Total de ocorrências na faixa de densidade correspondente.",
+  "contexto_municipal_no_cruzamento_por_tipo": "Faixa fixa de densidade demográfica de 2022."
+}

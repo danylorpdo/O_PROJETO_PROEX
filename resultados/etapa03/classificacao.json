@@ -1,0 +1,526 @@
+{
+  "particoes": {
+    "treino": {
+      "ano": 2023,
+      "ocorrencias": 7110,
+      "graves": 1952
+    },
+    "validacao": {
+      "ano": 2024,
+      "ocorrencias": 7583,
+      "graves": 1966
+    },
+    "teste": {
+      "ano": 2025,
+      "ocorrencias": 7630,
+      "graves": 1946
+    }
+  },
+  "atributos_prf": [
+    "dia_semana",
+    "fase_dia",
+    "condicao_metereologica",
+    "tipo_pista",
+    "uso_solo",
+    "br",
+    "mes"
+  ],
+  "atributos_ibge_2022": [
+    "populacao_2022",
+    "area_km2_2022",
+    "densidade_hab_km2_2022",
+    "proporcao_urbana_2022"
+  ],
+  "nomes_modelos": {
+    "majoritaria": "Referência majoritária",
+    "logistica": "Regressão Logística",
+    "arvore": "Árvore de Decisão",
+    "floresta": "Random Forest"
+  },
+  "parametros_modelos": {
+    "majoritaria": {
+      "constant": null,
+      "random_state": null,
+      "strategy": "most_frequent"
+    },
+    "logistica": {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": 0.0,
+      "max_iter": 500,
+      "n_jobs": null,
+      "penalty": "deprecated",
+      "random_state": 42,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "arvore": {
+      "ccp_alpha": 0.0,
+      "class_weight": "balanced",
+      "criterion": "gini",
+      "max_depth": 4,
+      "max_features": null,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 30,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "random_state": 42,
+      "splitter": "best"
+    },
+    "floresta": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": "balanced",
+      "criterion": "gini",
+      "max_depth": 12,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 15,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 200,
+      "n_jobs": 1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    }
+  },
+  "cenarios": {
+    "prf": "PRF",
+    "prf_ibge": "PRF + IBGE"
+  },
+  "semente": 42,
+  "bootstrap_municipal_repeticoes": 500,
+  "municipios_teste": 149,
+  "rotulos_matrizes": [
+    "Não grave",
+    "Grave"
+  ],
+  "metricas": [
+    {
+      "ano": 2024,
+      "modelo": "majoritaria",
+      "cenario": "prf",
+      "ocorrencias": 7583,
+      "acuracia": 0.7407358565211658,
+      "precisao": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "vn": 5617,
+      "fp": 0,
+      "fn": 1966,
+      "vp": 0
+    },
+    {
+      "ano": 2024,
+      "modelo": "logistica",
+      "cenario": "prf",
+      "ocorrencias": 7583,
+      "acuracia": 0.5555848608730054,
+      "precisao": 0.30068143100511074,
+      "recall": 0.5386571719226857,
+      "f1": 0.385932944606414,
+      "roc_auc": 0.5745946173067481,
+      "vn": 3154,
+      "fp": 2463,
+      "fn": 907,
+      "vp": 1059
+    },
+    {
+      "ano": 2024,
+      "modelo": "logistica",
+      "cenario": "prf_ibge",
+      "ocorrencias": 7583,
+      "acuracia": 0.5543979955162864,
+      "precisao": 0.29888983774551664,
+      "recall": 0.5340793489318413,
+      "f1": 0.3832816207337105,
+      "roc_auc": 0.5770878207070492,
+      "vn": 3154,
+      "fp": 2463,
+      "fn": 916,
+      "vp": 1050
+    },
+    {
+      "ano": 2024,
+      "modelo": "arvore",
+      "cenario": "prf",
+      "ocorrencias": 7583,
+      "acuracia": 0.557035474086773,
+      "precisao": 0.30462833099579245,
+      "recall": 0.5523906408952187,
+      "f1": 0.3926957150605677,
+      "roc_auc": 0.5687295560943373,
+      "vn": 3138,
+      "fp": 2479,
+      "fn": 880,
+      "vp": 1086
+    },
+    {
+      "ano": 2024,
+      "modelo": "arvore",
+      "cenario": "prf_ibge",
+      "ocorrencias": 7583,
+      "acuracia": 0.5114070948173546,
+      "precisao": 0.2961313012895662,
+      "recall": 0.6424211597151577,
+      "f1": 0.405392392874338,
+      "roc_auc": 0.5692730667384345,
+      "vn": 2615,
+      "fp": 3002,
+      "fn": 703,
+      "vp": 1263
+    },
+    {
+      "ano": 2024,
+      "modelo": "floresta",
+      "cenario": "prf",
+      "ocorrencias": 7583,
+      "acuracia": 0.5480680469471185,
+      "precisao": 0.30057330057330056,
+      "recall": 0.5600203458799593,
+      "f1": 0.39118848818617874,
+      "roc_auc": 0.5741454648917661,
+      "vn": 3055,
+      "fp": 2562,
+      "fn": 865,
+      "vp": 1101
+    },
+    {
+      "ano": 2024,
+      "modelo": "floresta",
+      "cenario": "prf_ibge",
+      "ocorrencias": 7583,
+      "acuracia": 0.572596597652644,
+      "precisao": 0.30792407351611933,
+      "recall": 0.5198372329603256,
+      "f1": 0.38675496688741723,
+      "roc_auc": 0.5835224723812015,
+      "vn": 3320,
+      "fp": 2297,
+      "fn": 944,
+      "vp": 1022
+    },
+    {
+      "ano": 2025,
+      "modelo": "majoritaria",
+      "cenario": "prf",
+      "ocorrencias": 7630,
+      "acuracia": 0.744954128440367,
+      "precisao": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "vn": 5684,
+      "fp": 0,
+      "fn": 1946,
+      "vp": 0
+    },
+    {
+      "ano": 2025,
+      "modelo": "logistica",
+      "cenario": "prf",
+      "ocorrencias": 7630,
+      "acuracia": 0.5619921363040629,
+      "precisao": 0.30170454545454545,
+      "recall": 0.5457348406988695,
+      "f1": 0.3885839736553238,
+      "roc_auc": 0.5794711069387177,
+      "vn": 3226,
+      "fp": 2458,
+      "fn": 884,
+      "vp": 1062
+    },
+    {
+      "ano": 2025,
+      "modelo": "logistica",
+      "cenario": "prf_ibge",
+      "ocorrencias": 7630,
+      "acuracia": 0.5639580602883355,
+      "precisao": 0.3031080695751354,
+      "recall": 0.5462487153134635,
+      "f1": 0.3898771318540253,
+      "roc_auc": 0.5826219340200907,
+      "vn": 3240,
+      "fp": 2444,
+      "fn": 883,
+      "vp": 1063
+    },
+    {
+      "ano": 2025,
+      "modelo": "arvore",
+      "cenario": "prf",
+      "ocorrencias": 7630,
+      "acuracia": 0.5570117955439057,
+      "precisao": 0.29642248722316866,
+      "recall": 0.5364850976361768,
+      "f1": 0.38185808339429406,
+      "roc_auc": 0.5639208398034763,
+      "vn": 3206,
+      "fp": 2478,
+      "fn": 902,
+      "vp": 1044
+    },
+    {
+      "ano": 2025,
+      "modelo": "arvore",
+      "cenario": "prf_ibge",
+      "ocorrencias": 7630,
+      "acuracia": 0.510615989515072,
+      "precisao": 0.2924791086350975,
+      "recall": 0.6474820143884892,
+      "f1": 0.40294211704509114,
+      "roc_auc": 0.5695464740100952,
+      "vn": 2636,
+      "fp": 3048,
+      "fn": 686,
+      "vp": 1260
+    },
+    {
+      "ano": 2025,
+      "modelo": "floresta",
+      "cenario": "prf",
+      "ocorrencias": 7630,
+      "acuracia": 0.5520314547837484,
+      "precisao": 0.2972451790633609,
+      "recall": 0.5544707091469682,
+      "f1": 0.3870157819225251,
+      "roc_auc": 0.5714979137630882,
+      "vn": 3133,
+      "fp": 2551,
+      "fn": 867,
+      "vp": 1079
+    },
+    {
+      "ano": 2025,
+      "modelo": "floresta",
+      "cenario": "prf_ibge",
+      "ocorrencias": 7630,
+      "acuracia": 0.5715596330275229,
+      "precisao": 0.3033006244424621,
+      "recall": 0.5241521068859198,
+      "f1": 0.38425315501977775,
+      "roc_auc": 0.587417946410942,
+      "vn": 3341,
+      "fp": 2343,
+      "fn": 926,
+      "vp": 1020
+    }
+  ],
+  "ganhos_teste": [
+    {
+      "modelo": "logistica",
+      "delta_acuracia": 0.001965923984272644,
+      "delta_precisao": 0.0014035241205899718,
+      "delta_recall": 0.0005138746145940676,
+      "delta_f1": 0.0012931581987014606,
+      "delta_roc_auc": 0.003150827081372931,
+      "f1_ic95_inferior": -0.006057046818381311,
+      "f1_ic95_superior": 0.008446579408984243,
+      "roc_auc_ic95_inferior": -0.0015791359731389897,
+      "roc_auc_ic95_superior": 0.00708561480124426
+    },
+    {
+      "modelo": "arvore",
+      "delta_acuracia": -0.04639580602883364,
+      "delta_precisao": -0.003943378588071145,
+      "delta_recall": 0.11099691675231238,
+      "delta_f1": 0.021084033650797085,
+      "delta_roc_auc": 0.005625634206618879,
+      "f1_ic95_inferior": 0.010108290934299982,
+      "f1_ic95_superior": 0.03194415479079299,
+      "roc_auc_ic95_inferior": -0.007895432782024772,
+      "roc_auc_ic95_superior": 0.016935079371405832
+    },
+    {
+      "modelo": "floresta",
+      "delta_acuracia": 0.019528178243774508,
+      "delta_precisao": 0.0060554453791011875,
+      "delta_recall": -0.030318602261048322,
+      "delta_f1": -0.002762626902747367,
+      "delta_roc_auc": 0.0159200326478538,
+      "f1_ic95_inferior": -0.015771810652829447,
+      "f1_ic95_superior": 0.011064651605906237,
+      "roc_auc_ic95_inferior": 0.006817891487492294,
+      "roc_auc_ic95_superior": 0.02490241130062048
+    }
+  ],
+  "interpretacoes": {
+    "arvore_prf": {
+      "importancias": [
+        {
+          "campo": "Dia da semana",
+          "importancia": 0.010552472839310094
+        },
+        {
+          "campo": "Fase do dia",
+          "importancia": 0.16189649109254403
+        },
+        {
+          "campo": "Clima",
+          "importancia": 0.0758333080689244
+        },
+        {
+          "campo": "Tipo de pista",
+          "importancia": 0.4680974557067269
+        },
+        {
+          "campo": "Uso do solo",
+          "importancia": 0.0
+        },
+        {
+          "campo": "Rodovia",
+          "importancia": 0.28362027229249465
+        },
+        {
+          "campo": "Mês",
+          "importancia": 0.0
+        }
+      ],
+      "arvore": "|--- tipo_pista_Simples <= 0.50\n|   |--- br_116 <= 0.50\n|   |   |--- fase_dia_Plena Noite <= 0.50\n|   |   |   |--- br_376 <= 0.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- br_376 >  0.50\n|   |   |   |   |--- class: 0\n|   |   |--- fase_dia_Plena Noite >  0.50\n|   |   |   |--- condicao_metereologica_Céu Claro <= 0.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- condicao_metereologica_Céu Claro >  0.50\n|   |   |   |   |--- class: 1\n|   |--- br_116 >  0.50\n|   |   |--- condicao_metereologica_Chuva <= 0.50\n|   |   |   |--- condicao_metereologica_Garoa/Chuvisco <= 0.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- condicao_metereologica_Garoa/Chuvisco >  0.50\n|   |   |   |   |--- class: 0\n|   |   |--- condicao_metereologica_Chuva >  0.50\n|   |   |   |--- fase_dia_Plena Noite <= 0.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- fase_dia_Plena Noite >  0.50\n|   |   |   |   |--- class: 0\n|--- tipo_pista_Simples >  0.50\n|   |--- br_153 <= 0.50\n|   |   |--- br_116 <= 0.50\n|   |   |   |--- br_277 <= 0.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- br_277 >  0.50\n|   |   |   |   |--- class: 1\n|   |   |--- br_116 >  0.50\n|   |   |   |--- fase_dia_Pleno dia <= 0.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- fase_dia_Pleno dia >  0.50\n|   |   |   |   |--- class: 0\n|   |--- br_153 >  0.50\n|   |   |--- dia_semana_sexta-feira <= 0.50\n|   |   |   |--- fase_dia_Plena Noite <= 0.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- fase_dia_Plena Noite >  0.50\n|   |   |   |   |--- class: 0\n|   |   |--- dia_semana_sexta-feira >  0.50\n|   |   |   |--- class: 0\n"
+    },
+    "floresta_prf": {
+      "importancias": [
+        {
+          "campo": "Dia da semana",
+          "importancia": 0.13195978317520296
+        },
+        {
+          "campo": "Fase do dia",
+          "importancia": 0.0920014886514196
+        },
+        {
+          "campo": "Clima",
+          "importancia": 0.1154067223667887
+        },
+        {
+          "campo": "Tipo de pista",
+          "importancia": 0.20918543832603992
+        },
+        {
+          "campo": "Uso do solo",
+          "importancia": 0.05200865906664459
+        },
+        {
+          "campo": "Rodovia",
+          "importancia": 0.23138465096399116
+        },
+        {
+          "campo": "Mês",
+          "importancia": 0.1680532574499129
+        }
+      ]
+    },
+    "arvore_prf_ibge": {
+      "importancias": [
+        {
+          "campo": "Dia da semana",
+          "importancia": 0.014568528097774435
+        },
+        {
+          "campo": "Fase do dia",
+          "importancia": 0.06879606003680395
+        },
+        {
+          "campo": "Clima",
+          "importancia": 0.04730773359297798
+        },
+        {
+          "campo": "Tipo de pista",
+          "importancia": 0.45659343399018565
+        },
+        {
+          "campo": "Uso do solo",
+          "importancia": 0.0
+        },
+        {
+          "campo": "Rodovia",
+          "importancia": 0.15550540201286056
+        },
+        {
+          "campo": "Mês",
+          "importancia": 0.0
+        },
+        {
+          "campo": "População (2022)",
+          "importancia": 0.02474964992537346
+        },
+        {
+          "campo": "Área (2022)",
+          "importancia": 0.0
+        },
+        {
+          "campo": "Densidade (2022)",
+          "importancia": 0.1956052091294413
+        },
+        {
+          "campo": "Proporção urbana (2022)",
+          "importancia": 0.03687398321458289
+        }
+      ],
+      "arvore": "|--- tipo_pista_Simples <= 0.50\n|   |--- br_116 <= 0.50\n|   |   |--- fase_dia_Plena Noite <= 0.50\n|   |   |   |--- densidade_hab_km2_2022 <= 9.97\n|   |   |   |   |--- class: 1\n|   |   |   |--- densidade_hab_km2_2022 >  9.97\n|   |   |   |   |--- class: 0\n|   |   |--- fase_dia_Plena Noite >  0.50\n|   |   |   |--- proporcao_urbana_2022 <= 0.57\n|   |   |   |   |--- class: 0\n|   |   |   |--- proporcao_urbana_2022 >  0.57\n|   |   |   |   |--- class: 1\n|   |--- br_116 >  0.50\n|   |   |--- condicao_metereologica_Chuva <= 0.50\n|   |   |   |--- condicao_metereologica_Garoa/Chuvisco <= 0.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- condicao_metereologica_Garoa/Chuvisco >  0.50\n|   |   |   |   |--- class: 0\n|   |   |--- condicao_metereologica_Chuva >  0.50\n|   |   |   |--- populacao_2022 <= 280920.00\n|   |   |   |   |--- class: 0\n|   |   |   |--- populacao_2022 >  280920.00\n|   |   |   |   |--- class: 0\n|--- tipo_pista_Simples >  0.50\n|   |--- densidade_hab_km2_2022 <= 654.83\n|   |   |--- br_476 <= 0.50\n|   |   |   |--- densidade_hab_km2_2022 <= 15.35\n|   |   |   |   |--- class: 1\n|   |   |   |--- densidade_hab_km2_2022 >  15.35\n|   |   |   |   |--- class: 1\n|   |   |--- br_476 >  0.50\n|   |   |   |--- dia_semana_quinta-feira <= 0.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- dia_semana_quinta-feira >  0.50\n|   |   |   |   |--- class: 1\n|   |--- densidade_hab_km2_2022 >  654.83\n|   |   |--- class: 0\n"
+    },
+    "floresta_prf_ibge": {
+      "importancias": [
+        {
+          "campo": "Dia da semana",
+          "importancia": 0.07837563637808952
+        },
+        {
+          "campo": "Fase do dia",
+          "importancia": 0.06263176083872851
+        },
+        {
+          "campo": "Clima",
+          "importancia": 0.07333344589176105
+        },
+        {
+          "campo": "Tipo de pista",
+          "importancia": 0.10940710123750419
+        },
+        {
+          "campo": "Uso do solo",
+          "importancia": 0.030315281165489177
+        },
+        {
+          "campo": "Rodovia",
+          "importancia": 0.12578523597559788
+        },
+        {
+          "campo": "Mês",
+          "importancia": 0.0942365114341286
+        },
+        {
+          "campo": "População (2022)",
+          "importancia": 0.10217058519207228
+        },
+        {
+          "campo": "Área (2022)",
+          "importancia": 0.10103775316480629
+        },
+        {
+          "campo": "Densidade (2022)",
+          "importancia": 0.1208998544687328
+        },
+        {
+          "campo": "Proporção urbana (2022)",
+          "importancia": 0.10180683425308984
+        }
+      ]
+    }
+  },
+  "sha256_base_integrada": "6b0f626fc47df5c47388e4799425cea62884a28b0c228e403c4293f5100a034f",
+  "versao_scikit_learn": "1.9.1"
+}

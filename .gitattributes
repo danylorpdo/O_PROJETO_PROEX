@@ -1,0 +1,7 @@
+# Preserve os bytes dos arquivos verificados por SHA-256.
+*.zip -text
+dados/externos/ibge/sidra_*.json -text
+dados/externos/ibge/localidades_pr.json -text
+dados/processados/prf_ibge_integrada.csv -text
+
+*.sh text eol=lf

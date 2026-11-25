@@ -1,0 +1,63 @@
+{
+  "localidades_pr.json": {
+    "url": "https://servicodados.ibge.gov.br/api/v1/localidades/estados/41/municipios",
+    "referencia": "Cadastro consultado na data de obtenção",
+    "formato": "JSON",
+    "variaveis": [
+      "id",
+      "nome",
+      "sigla da UF"
+    ],
+    "obtido_em": "2026-11-24T21:30:29-03:00",
+    "bytes": 170538,
+    "sha256": "aa5f984155444aece8f3647bd480b11fcb41a409c669b2c58bd4410db7ae7c23"
+  },
+  "sidra_4714_pr_2022.json": {
+    "url": "https://apisidra.ibge.gov.br/values/t/4714/n6/in%20n3%2041/v/all/p/2022",
+    "referencia": "Censo 2022, primeiros resultados de população e domicílios",
+    "formato": "JSON",
+    "variaveis": [
+      "93: população residente",
+      "6318: área territorial (km²)",
+      "614: densidade demográfica (hab./km²)"
+    ],
+    "obtido_em": "2026-11-24T21:30:30-03:00",
+    "bytes": 333953,
+    "sha256": "b1091c64044134b5fef939c8435fbdebe7ffb7e9c9be86596b207b47d01cf227"
+  },
+  "sidra_9923_pr_2022.json": {
+    "url": "https://apisidra.ibge.gov.br/values/t/9923/n6/in%20n3%2041/v/93/p/2022/c1/all",
+    "referencia": "Censo 2022, situação do domicílio",
+    "formato": "JSON",
+    "variaveis": [
+      "93: população residente, total, urbana e rural"
+    ],
+    "obtido_em": "2026-11-24T21:30:30-03:00",
+    "bytes": 358421,
+    "sha256": "3726c8dfa34a62c9c5d63b3a4e01c267892c8302d7f6de05afbea436f73f0e0a"
+  },
+  "sidra_6579_pr_2024_2025.json": {
+    "url": "https://apisidra.ibge.gov.br/values/t/6579/n6/in%20n3%2041/v/9324/p/2024,2025",
+    "referencia": "1º de julho de 2024 e 1º de julho de 2025",
+    "formato": "JSON",
+    "variaveis": [
+      "9324: população residente estimada"
+    ],
+    "obtido_em": "2026-11-24T21:30:31-03:00",
+    "bytes": 216635,
+    "sha256": "935d453959480602a6f7bec3b5d4ee805201c37f77a99376b0d8eaf5e3c11462"
+  },
+  "PR_Municipios_2022.zip": {
+    "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2022/UFs/PR/PR_Municipios_2022.zip",
+    "referencia": "Malha Municipal Digital 2022, Paraná, SIRGAS 2000 (EPSG:4674)",
+    "formato": "ZIP (Shapefile)",
+    "variaveis": [
+      "CD_MUN",
+      "SIGLA_UF",
+      "geometria"
+    ],
+    "obtido_em": "2026-11-24T21:30:31-03:00",
+    "bytes": 4082138,
+    "sha256": "16df2b4fbac25150a2d8c0f794a9b495df70b711c5b4ab231e2c8fe03a9fcc2a"
+  }
+}

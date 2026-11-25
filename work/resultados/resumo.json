@@ -1,0 +1,555 @@
+{
+  "n": 22323,
+  "graves": 5864,
+  "taxa_graves": 0.26268870671504724,
+  "auditoria": [
+    {
+      "ano": 2023,
+      "brasil": 67766,
+      "parana_bruto": 7110,
+      "analisados": 7110,
+      "graves": 1952,
+      "sha256": "b233c47d16b3980a6692472f9fe1bbab57698700fbb918d22628a5c0a382d985",
+      "url": "https://drive.google.com/file/d/1-WO3SfNrwwZ5_l7fRTiwBKRw7mi1-HUq/view"
+    },
+    {
+      "ano": 2024,
+      "brasil": 73202,
+      "parana_bruto": 7583,
+      "analisados": 7583,
+      "graves": 1966,
+      "sha256": "905dac836867297b261e4edefff6cdb470809814e7e1796b3f2f57517099d165",
+      "url": "https://drive.google.com/file/d/14lB0vqMFkaZj8HZ44b0njYgxs9nAN8KO/view"
+    },
+    {
+      "ano": 2025,
+      "brasil": 72529,
+      "parana_bruto": 7630,
+      "analisados": 7630,
+      "graves": 1946,
+      "sha256": "52c8a631ac9d428bf845e2fa996b8c61f66b219f7014a61d292f9d95d186bb0f",
+      "url": "https://drive.google.com/file/d/1-G3MdmHBt6CprDwcW99xxC4BZ2DU5ryR/view"
+    }
+  ],
+  "parametros": {
+    "suporte_minimo": 0.01,
+    "confianca_minima": 0.25,
+    "lift_maior_que": 1,
+    "max_itens": 3
+  },
+  "itens_frequentes_por_tamanho": {
+    "1": 25,
+    "2": 165,
+    "3": 437
+  },
+  "n_regras": 51,
+  "regras": [
+    {
+      "antecedente": "dia_semana=sexta-feira E tipo_pista=Simples",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1380,
+      "n_graves": 457,
+      "suporte": 0.020472158760023295,
+      "confianca": 0.33115942028985507,
+      "lift": 1.2606534343674003
+    },
+    {
+      "antecedente": "fase_dia=Plena Noite E tipo_pista=Simples",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 3227,
+      "n_graves": 1067,
+      "suporte": 0.0477982350042557,
+      "confianca": 0.33064766036566473,
+      "lift": 1.2587052732508073
+    },
+    {
+      "antecedente": "dia_semana=sábado E tipo_pista=Simples",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1520,
+      "n_graves": 495,
+      "suporte": 0.022174438919500068,
+      "confianca": 0.3256578947368421,
+      "lift": 1.2397102974438143
+    },
+    {
+      "antecedente": "tipo_pista=Simples E uso_solo=Não",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 6081,
+      "n_graves": 1957,
+      "suporte": 0.0876674282130538,
+      "confianca": 0.3218220687386943,
+      "lift": 1.2251081242247397
+    },
+    {
+      "antecedente": "condicao_metereologica=Chuva E tipo_pista=Simples",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 928,
+      "n_graves": 298,
+      "suporte": 0.013349460198002061,
+      "confianca": 0.32112068965517243,
+      "lift": 1.2224381233240817
+    },
+    {
+      "antecedente": "dia_semana=segunda-feira E tipo_pista=Simples",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1147,
+      "n_graves": 368,
+      "suporte": 0.016485239439143484,
+      "confianca": 0.32083696599825634,
+      "lift": 1.2213580477454087
+    },
+    {
+      "antecedente": "condicao_metereologica=Nublado E tipo_pista=Simples",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1415,
+      "n_graves": 452,
+      "suporte": 0.020248174528513192,
+      "confianca": 0.31943462897526503,
+      "lift": 1.2160196491498707
+    },
+    {
+      "antecedente": "condicao_metereologica=Céu Claro E tipo_pista=Simples",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 5529,
+      "n_graves": 1745,
+      "suporte": 0.0781704967970255,
+      "confianca": 0.3156086091517453,
+      "lift": 1.2014548059506158
+    },
+    {
+      "antecedente": "tipo_pista=Simples",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 8933,
+      "n_graves": 2809,
+      "suporte": 0.12583434126237514,
+      "confianca": 0.3144520317922311,
+      "lift": 1.1970519620903777
+    },
+    {
+      "antecedente": "dia_semana=domingo E tipo_pista=Simples",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1502,
+      "n_graves": 472,
+      "suporte": 0.0211441114545536,
+      "confianca": 0.31424766977363516,
+      "lift": 1.1962739993787275
+    },
+    {
+      "antecedente": "dia_semana=quarta-feira E tipo_pista=Simples",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1153,
+      "n_graves": 350,
+      "suporte": 0.01567889620570712,
+      "confianca": 0.30355594102341715,
+      "lift": 1.1555728634832438
+    },
+    {
+      "antecedente": "condicao_metereologica=Céu Claro E fase_dia=Plena Noite",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 4515,
+      "n_graves": 1360,
+      "suporte": 0.06092371097074766,
+      "confianca": 0.301218161683278,
+      "lift": 1.1466734350709098
+    },
+    {
+      "antecedente": "fase_dia=Pleno dia E tipo_pista=Simples",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 4687,
+      "n_graves": 1410,
+      "suporte": 0.06316355328584868,
+      "confianca": 0.300832088756134,
+      "lift": 1.1452037376028614
+    },
+    {
+      "antecedente": "dia_semana=quinta-feira E fase_dia=Plena Noite",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 913,
+      "n_graves": 274,
+      "suporte": 0.012274335886753572,
+      "confianca": 0.30010952902519167,
+      "lift": 1.1424531064852241
+    },
+    {
+      "antecedente": "dia_semana=quinta-feira E tipo_pista=Simples",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1122,
+      "n_graves": 336,
+      "suporte": 0.015051740357478834,
+      "confianca": 0.2994652406417112,
+      "lift": 1.140000437729352
+    },
+    {
+      "antecedente": "tipo_pista=Simples E uso_solo=Sim",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 2852,
+      "n_graves": 852,
+      "suporte": 0.03816691304932133,
+      "confianca": 0.29873772791023845,
+      "lift": 1.1372309515928127
+    },
+    {
+      "antecedente": "dia_semana=terça-feira E tipo_pista=Simples",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1109,
+      "n_graves": 331,
+      "suporte": 0.014827756125968731,
+      "confianca": 0.2984670874661858,
+      "lift": 1.136200681021089
+    },
+    {
+      "antecedente": "condicao_metereologica=Céu Claro E dia_semana=sábado",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 2096,
+      "n_graves": 618,
+      "suporte": 0.02768445101464857,
+      "confianca": 0.2948473282442748,
+      "lift": 1.12242102803495
+    },
+    {
+      "antecedente": "dia_semana=sexta-feira E fase_dia=Plena Noite",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1247,
+      "n_graves": 367,
+      "suporte": 0.016440442592841463,
+      "confianca": 0.2943063352044908,
+      "lift": 1.120361582668801
+    },
+    {
+      "antecedente": "fase_dia=Plena Noite E uso_solo=Sim",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 3094,
+      "n_graves": 907,
+      "suporte": 0.04063073959593245,
+      "confianca": 0.2931480284421461,
+      "lift": 1.1159521553400458
+    },
+    {
+      "antecedente": "condicao_metereologica=Sol E fase_dia=Pleno dia",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1163,
+      "n_graves": 340,
+      "suporte": 0.015230927742686915,
+      "confianca": 0.292347377472055,
+      "lift": 1.1129042474946598
+    },
+    {
+      "antecedente": "dia_semana=terça-feira E fase_dia=Plena Noite",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 818,
+      "n_graves": 239,
+      "suporte": 0.01070644626618286,
+      "confianca": 0.2921760391198044,
+      "lift": 1.112251998852557
+    },
+    {
+      "antecedente": "dia_semana=sábado E fase_dia=Plena Noite",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1582,
+      "n_graves": 462,
+      "suporte": 0.020696142991533398,
+      "confianca": 0.2920353982300885,
+      "lift": 1.1117166089171668
+    },
+    {
+      "antecedente": "condicao_metereologica=Sol",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1194,
+      "n_graves": 348,
+      "suporte": 0.015589302513103077,
+      "confianca": 0.2914572864321608,
+      "lift": 1.1095158603385276
+    },
+    {
+      "antecedente": "condicao_metereologica=Nublado E fase_dia=Plena Noite",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1662,
+      "n_graves": 482,
+      "suporte": 0.021592079917573802,
+      "confianca": 0.29001203369434414,
+      "lift": 1.1040140907501441
+    },
+    {
+      "antecedente": "fase_dia=Plena Noite",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 7877,
+      "n_graves": 2254,
+      "suporte": 0.10097209156475384,
+      "confianca": 0.28614954932080744,
+      "lift": 1.0893104347695064
+    },
+    {
+      "antecedente": "condicao_metereologica=Céu Claro E dia_semana=segunda-feira",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1605,
+      "n_graves": 454,
+      "suporte": 0.020337768221117235,
+      "confianca": 0.28286604361370715,
+      "lift": 1.0768108273514299
+    },
+    {
+      "antecedente": "fase_dia=Plena Noite E uso_solo=Não",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 4783,
+      "n_graves": 1347,
+      "suporte": 0.06034135196882139,
+      "confianca": 0.28162241271168725,
+      "lift": 1.0720765891819568
+    },
+    {
+      "antecedente": "condicao_metereologica=Céu Claro E uso_solo=Não",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 7317,
+      "n_graves": 2060,
+      "suporte": 0.0922815033821619,
+      "confianca": 0.2815361486948203,
+      "lift": 1.0717482004287984
+    },
+    {
+      "antecedente": "condicao_metereologica=Céu Claro E dia_semana=domingo",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 2092,
+      "n_graves": 587,
+      "suporte": 0.02629574877928594,
+      "confianca": 0.2805927342256214,
+      "lift": 1.0681568223258096
+    },
+    {
+      "antecedente": "dia_semana=domingo E fase_dia=Plena Noite",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1563,
+      "n_graves": 433,
+      "suporte": 0.019397034448774806,
+      "confianca": 0.2770313499680102,
+      "lift": 1.0545993904051658
+    },
+    {
+      "antecedente": "fase_dia=Anoitecer",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1251,
+      "n_graves": 345,
+      "suporte": 0.015454911974197016,
+      "confianca": 0.27577937649880097,
+      "lift": 1.0498333938579014
+    },
+    {
+      "antecedente": "dia_semana=segunda-feira E uso_solo=Não",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1795,
+      "n_graves": 495,
+      "suporte": 0.022174438919500068,
+      "confianca": 0.2757660167130919,
+      "lift": 1.0497825359969903
+    },
+    {
+      "antecedente": "condicao_metereologica=Céu Claro E dia_semana=quarta-feira",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1705,
+      "n_graves": 470,
+      "suporte": 0.021054517761949557,
+      "confianca": 0.2756598240469208,
+      "lift": 1.049378283117226
+    },
+    {
+      "antecedente": "dia_semana=sábado E uso_solo=Sim",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1364,
+      "n_graves": 375,
+      "suporte": 0.016798817363257626,
+      "confianca": 0.2749266862170088,
+      "lift": 1.0465873834280846
+    },
+    {
+      "antecedente": "condicao_metereologica=Céu Claro",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 12660,
+      "n_graves": 3476,
+      "suporte": 0.1557138377458227,
+      "confianca": 0.274565560821485,
+      "lift": 1.0452126559034804
+    },
+    {
+      "antecedente": "dia_semana=quarta-feira E fase_dia=Plena Noite",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 886,
+      "n_graves": 243,
+      "suporte": 0.010885633651390942,
+      "confianca": 0.2742663656884876,
+      "lift": 1.0440736837080677
+    },
+    {
+      "antecedente": "dia_semana=quarta-feira E uso_solo=Sim",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1199,
+      "n_graves": 327,
+      "suporte": 0.01464856874076065,
+      "confianca": 0.2727272727272727,
+      "lift": 1.03821468436066
+    },
+    {
+      "antecedente": "dia_semana=sexta-feira E uso_solo=Sim",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1478,
+      "n_graves": 402,
+      "suporte": 0.018008332213412175,
+      "confianca": 0.2719891745602165,
+      "lift": 1.035404901723689
+    },
+    {
+      "antecedente": "dia_semana=segunda-feira E fase_dia=Plena Noite",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 868,
+      "n_graves": 236,
+      "suporte": 0.0105720557272768,
+      "confianca": 0.271889400921659,
+      "lift": 1.0350250847159266
+    },
+    {
+      "antecedente": "dia_semana=sábado",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 3626,
+      "n_graves": 982,
+      "suporte": 0.04399050306858397,
+      "confianca": 0.27082184225041367,
+      "lift": 1.0309611160566141
+    },
+    {
+      "antecedente": "dia_semana=domingo E uso_solo=Não",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 2406,
+      "n_graves": 647,
+      "suporte": 0.028983559557407158,
+      "confianca": 0.26891105569409807,
+      "lift": 1.0236871582979794
+    },
+    {
+      "antecedente": "dia_semana=sábado E uso_solo=Não",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 2262,
+      "n_graves": 607,
+      "suporte": 0.027191685705326346,
+      "confianca": 0.26834659593280286,
+      "lift": 1.021538380117319
+    },
+    {
+      "antecedente": "dia_semana=sexta-feira",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 3454,
+      "n_graves": 921,
+      "suporte": 0.04125789544416073,
+      "confianca": 0.26664736537348005,
+      "lift": 1.0150697710150403
+    },
+    {
+      "antecedente": "dia_semana=domingo E fase_dia=Pleno dia",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1629,
+      "n_graves": 434,
+      "suporte": 0.019441831295076827,
+      "confianca": 0.2664211172498465,
+      "lift": 1.0142084925594004
+    },
+    {
+      "antecedente": "dia_semana=quarta-feira",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 2855,
+      "n_graves": 759,
+      "suporte": 0.034000806343233436,
+      "confianca": 0.2658493870402802,
+      "lift": 1.012032037329498
+    },
+    {
+      "antecedente": "condicao_metereologica=Céu Claro E dia_semana=sexta-feira",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 1921,
+      "n_graves": 510,
+      "suporte": 0.022846391614030372,
+      "confianca": 0.26548672566371684,
+      "lift": 1.0106514626519698
+    },
+    {
+      "antecedente": "condicao_metereologica=Céu Claro E uso_solo=Sim",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 5343,
+      "n_graves": 1416,
+      "suporte": 0.0634323343636608,
+      "confianca": 0.26501965188096577,
+      "lift": 1.0088734121655525
+    },
+    {
+      "antecedente": "dia_semana=domingo",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 3619,
+      "n_graves": 958,
+      "suporte": 0.04291537875733548,
+      "confianca": 0.26471400939486045,
+      "lift": 1.0077098962690092
+    },
+    {
+      "antecedente": "uso_solo=Não",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 13504,
+      "n_graves": 3557,
+      "suporte": 0.15934238229628633,
+      "confianca": 0.2634034360189573,
+      "lift": 1.0027208223484285
+    },
+    {
+      "antecedente": "dia_semana=segunda-feira",
+      "consequente": "gravidade=grave",
+      "n_antecedente": 3005,
+      "n_graves": 791,
+      "suporte": 0.03543430542489809,
+      "confianca": 0.2632279534109817,
+      "lift": 1.0020527974067779
+    }
+  ],
+  "grupos": {
+    "fase_dia": [
+      {
+        "categoria": "Amanhecer",
+        "n": 1157,
+        "graves": 293,
+        "proporcao": 0.25324114088159033
+      },
+      {
+        "categoria": "Anoitecer",
+        "n": 1251,
+        "graves": 345,
+        "proporcao": 0.27577937649880097
+      },
+      {
+        "categoria": "Plena Noite",
+        "n": 7877,
+        "graves": 2254,
+        "proporcao": 0.28614954932080744
+      },
+      {
+        "categoria": "Pleno dia",
+        "n": 12038,
+        "graves": 2972,
+        "proporcao": 0.24688486459544776
+      }
+    ],
+    "tipo_pista": [
+      {
+        "categoria": "Dupla",
+        "n": 12498,
+        "graves": 2858,
+        "proporcao": 0.22867658825412066
+      },
+      {
+        "categoria": "Múltipla",
+        "n": 892,
+        "graves": 197,
+        "proporcao": 0.22085201793721973
+      },
+      {
+        "categoria": "Simples",
+        "n": 8933,
+        "graves": 2809,
+        "proporcao": 0.3144520317922311
+      }
+    ]
+  }
+}
